@@ -1,0 +1,15 @@
+version: "2.1"
+services:
+  lsyncd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lsyncd
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Australia/Melbourne
+    volumes:
+      - '~/Working/codea:/mnt/source'
+      - '~/.ssh:/home/docker/.ssh'
+    restart: unless-stopped
