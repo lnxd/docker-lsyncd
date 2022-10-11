@@ -10,10 +10,18 @@ Containerised lsyncd. Created to run on macOS for use with Unraid server as clie
 
 ## How to:
 1. To start, clone repo:
+
     git clone https://github.com/lnxd/docker-lsyncd.git
+
 2. Change to directory
+
     cd docker-lsyncd
+
 3. Configure options in `lsyncd.conf`
+
     nano lsyncd.conf
+
 4. Start container
+
     docker compose up --build
+    
